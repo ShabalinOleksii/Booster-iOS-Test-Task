@@ -22,6 +22,11 @@ extension APILink {
     }
 }
 
+protocol APIServiceProtocol: AnyObject {
+
+    func getCategories(completion: @escaping (Swift.Result<[CategoryModel], Error>) -> Void)
+}
+
 final class APIService {
 
     // MARK: - Singletone
@@ -29,7 +34,11 @@ final class APIService {
 
     private init() { }
 
-    // MARK: - Methods
+}
+
+// MARK: - APIServiceProtocol
+extension APIService: APIServiceProtocol {
+
     func getCategories(completion: @escaping (Swift.Result<[CategoryModel], Error>) -> Void) {
         guard
             let url = URL(string: APILink.getCategories.url)
@@ -65,16 +74,5 @@ final class APIService {
 //        }
 //
 //        completion(.success(categories))
-    }
-
-    func getImage(by url: URL, completion: @escaping (UIImage?) -> Void) {
-        let task = URLSession.shared.dataTask(with: url) { data, response, error in
-            if let data = data {
-                DispatchQueue.main.async { completion(UIImage(data: data)) }
-            } else {
-                completion(nil)
-            }
-        }
-        task.resume()
     }
 }

@@ -15,6 +15,10 @@
 		CF8176DF28A2E17200C1E9BB /* CategoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8176DE28A2E17200C1E9BB /* CategoryPresenter.swift */; };
 		CF8176E128A2E54C00C1E9BB /* CategoryBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8176E028A2E54C00C1E9BB /* CategoryBuilder.swift */; };
 		CF8176E328A2FDD400C1E9BB /* CategoryViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8176E228A2FDD400C1E9BB /* CategoryViewState.swift */; };
+		CF8176E528A2FF6D00C1E9BB /* CategoryTableViewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8176E428A2FF6D00C1E9BB /* CategoryTableViewProvider.swift */; };
+		CF8176EC28A3015200C1E9BB /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8176EA28A3015200C1E9BB /* CategoryCell.swift */; };
+		CF8176ED28A3015300C1E9BB /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF8176EB28A3015200C1E9BB /* CategoryCell.xib */; };
+		CF8176EF28A3063700C1E9BB /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8176EE28A3063700C1E9BB /* ImageLoader.swift */; };
 		CFC277A728A26A4C0079B211 /* ImageAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFC277A528A26A4B0079B211 /* ImageAssets.xcassets */; };
 		CFC277A828A26A4C0079B211 /* ColorAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFC277A628A26A4C0079B211 /* ColorAssets.xcassets */; };
 		CFC277AF28A26B210079B211 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC277AE28A26B210079B211 /* APIService.swift */; };
@@ -37,6 +41,10 @@
 		CF8176DE28A2E17200C1E9BB /* CategoryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPresenter.swift; sourceTree = "<group>"; };
 		CF8176E028A2E54C00C1E9BB /* CategoryBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryBuilder.swift; sourceTree = "<group>"; };
 		CF8176E228A2FDD400C1E9BB /* CategoryViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewState.swift; sourceTree = "<group>"; };
+		CF8176E428A2FF6D00C1E9BB /* CategoryTableViewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewProvider.swift; sourceTree = "<group>"; };
+		CF8176EA28A3015200C1E9BB /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		CF8176EB28A3015200C1E9BB /* CategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
+		CF8176EE28A3063700C1E9BB /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		CFC277A528A26A4B0079B211 /* ImageAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ImageAssets.xcassets; sourceTree = "<group>"; };
 		CFC277A628A26A4C0079B211 /* ColorAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ColorAssets.xcassets; sourceTree = "<group>"; };
 		CFC277AE28A26B210079B211 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
@@ -83,7 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				CF8176D828A2DE3500C1E9BB /* Protocols */,
-				CF8176D128A2DDE600C1E9BB /* Views */,
+				CF8176D128A2DDE600C1E9BB /* View */,
 				CF8176D228A2DDEF00C1E9BB /* Interactor */,
 				CF8176D328A2DDFE00C1E9BB /* Presenter */,
 				CF8176D428A2DE0600C1E9BB /* Entities */,
@@ -92,12 +100,13 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
-		CF8176D128A2DDE600C1E9BB /* Views */ = {
+		CF8176D128A2DDE600C1E9BB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CF8176E828A3012700C1E9BB /* Cells */,
 				CFC5716A28A25B26004A3958 /* CategoryViewController.swift */,
 			);
-			path = Views;
+			path = View;
 			sourceTree = "<group>";
 		};
 		CF8176D228A2DDEF00C1E9BB /* Interactor */ = {
@@ -112,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				CF8176DE28A2E17200C1E9BB /* CategoryPresenter.swift */,
+				CF8176E428A2FF6D00C1E9BB /* CategoryTableViewProvider.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -139,6 +149,23 @@
 				CF8176DA28A2DE4B00C1E9BB /* CategoryProtocols.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		CF8176E828A3012700C1E9BB /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				CF8176E928A3013900C1E9BB /* CategoryCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		CF8176E928A3013900C1E9BB /* CategoryCell */ = {
+			isa = PBXGroup;
+			children = (
+				CF8176EA28A3015200C1E9BB /* CategoryCell.swift */,
+				CF8176EB28A3015200C1E9BB /* CategoryCell.xib */,
+			);
+			path = CategoryCell;
 			sourceTree = "<group>";
 		};
 		CFC277A328A269560079B211 /* Resources */ = {
@@ -200,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				CFC277B628A273030079B211 /* LoadingView.swift */,
+				CF8176EE28A3063700C1E9BB /* ImageLoader.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -293,6 +321,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFC5717328A25B28004A3958 /* LaunchScreen.storyboard in Resources */,
+				CF8176ED28A3015300C1E9BB /* CategoryCell.xib in Resources */,
 				CFC5716E28A25B26004A3958 /* Main.storyboard in Resources */,
 				CFC277A828A26A4C0079B211 /* ColorAssets.xcassets in Resources */,
 				CF8176CC28A2BA1C00C1E9BB /* ios-challenge-words-booster.json in Resources */,
@@ -307,6 +336,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF8176EC28A3015200C1E9BB /* CategoryCell.swift in Sources */,
 				CF8176E328A2FDD400C1E9BB /* CategoryViewState.swift in Sources */,
 				CF8176DD28A2DF9900C1E9BB /* CategoryInteractor.swift in Sources */,
 				CF8176CF28A2BD7C00C1E9BB /* Error.swift in Sources */,
@@ -314,10 +344,12 @@
 				CF8176DB28A2DE4B00C1E9BB /* CategoryProtocols.swift in Sources */,
 				CFC5716B28A25B26004A3958 /* CategoryViewController.swift in Sources */,
 				CF8176DF28A2E17200C1E9BB /* CategoryPresenter.swift in Sources */,
+				CF8176E528A2FF6D00C1E9BB /* CategoryTableViewProvider.swift in Sources */,
 				CF8176D728A2DE2900C1E9BB /* CategoryRouter.swift in Sources */,
 				CFC277AF28A26B210079B211 /* APIService.swift in Sources */,
 				CFC5716728A25B26004A3958 /* AppDelegate.swift in Sources */,
 				CFC277B428A26B950079B211 /* FactModel.swift in Sources */,
+				CF8176EF28A3063700C1E9BB /* ImageLoader.swift in Sources */,
 				CFC277B228A26B8B0079B211 /* CategoryModel.swift in Sources */,
 				CFC277B728A273030079B211 /* LoadingView.swift in Sources */,
 				CFC5716928A25B26004A3958 /* SceneDelegate.swift in Sources */,

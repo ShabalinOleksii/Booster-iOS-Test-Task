@@ -19,6 +19,7 @@ protocol CategoryRouterProtocol: AnyObject {
 // MARK: - View
 protocol CategoryViewProtocol: AnyObject {
     func showLoadingIndicator(_ shouldShow: Bool)
+    func update(with viewState: CategoryViewState)
 }
 
 protocol CategoryViewDelegate: AnyObject {

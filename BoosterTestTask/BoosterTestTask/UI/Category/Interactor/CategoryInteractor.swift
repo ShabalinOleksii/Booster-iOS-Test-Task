@@ -9,9 +9,9 @@ import Foundation
 
 final class CategoryInteractor {
 
-    private let service: APIService
+    private let service: APIServiceProtocol
 
-    init(service: APIService) {
+    init(service: APIServiceProtocol) {
         self.service = service
     }
 }

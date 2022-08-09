@@ -9,7 +9,11 @@ import UIKit
 
 final class CategoryViewController: UIViewController {
 
-    var presenter: CategoryViewDelegate?
+    var presenter: CategoryPresenterProtocol?
+
+    @IBOutlet private var tableView: UITableView!
+
+    private var tableViewProvider: CategoryTableViewProviderProtocol?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +41,19 @@ extension CategoryViewController: CategoryViewProtocol {
             shouldShow
                 ? LoadingView.addLoader(to: self.view)
                 : LoadingView.removeLoader(from: self.view)
+        }
+    }
+
+    func update(with viewState: CategoryViewState) {
+        DispatchQueue.main.async {
+            if self.tableViewProvider == nil {
+                self.tableViewProvider = CategoryTableViewProvider(tableView: self.tableView,
+                                                                   viewState: viewState)
+                self.tableViewProvider?.presenter = self.presenter
+            }
+
+            self.tableViewProvider?.updateTableView(with: viewState)
+            self.tableViewProvider?.reloadTableView()
         }
     }
 }

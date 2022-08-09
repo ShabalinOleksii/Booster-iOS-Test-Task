@@ -48,15 +48,16 @@ private extension CategoryPresenter {
             guard let self = self else { return }
 
             defer {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+                // Added delay to show the way loading indicator works.
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                     self.view?.showLoadingIndicator(false)
                 }
             }
 
             switch result {
             case .success(let categories):
-                self.viewState.categories = categories
-                // TODO: Fulfill received data.
+                self.viewState.categories = categories.sorted(by: { $0.order < $1.order })
+                self.view?.update(with: self.viewState)
             case .failure(let error):
                 // TODO: Handle error if needed.
                 break
