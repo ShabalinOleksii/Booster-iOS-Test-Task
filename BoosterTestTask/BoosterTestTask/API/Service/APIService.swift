@@ -17,7 +17,7 @@ extension APILink {
     var url: String {
         switch self {
         case .getCategories:
-            return "https://github.com/AppSci/Words-Booster-iOS-TestTask#resources:~:text=Resources-,JSON%20Content%20Link,-Figma%20Link"
+            return "https://drive.google.com/uc?export=download&id=12L7OflAsIxPOF47ssRdKyjXoWbUrq4V5"
         }
     }
 }
@@ -30,8 +30,41 @@ final class APIService {
     private init() { }
 
     // MARK: - Methods
-    func getCategories(completion: ([CategoryModel]) -> Void) {
-        
+    func getCategories(completion: @escaping (Swift.Result<[CategoryModel], Error>) -> Void) {
+        guard
+            let url = URL(string: APILink.getCategories.url)
+        else {
+            completion(.failure(CategoryError(type: .internal(.invalidURL))))
+            return
+        }
+
+        let task = URLSession.shared.dataTask(with: url) { data, response, error in
+            if let data = data {
+                do {
+                    let jsonData = try JSONDecoder().decode([CategoryModel].self, from: data)
+                    completion(.success(jsonData))
+                } catch {
+                    completion(.failure(CategoryError(type: .internal(.decodeFailure))))
+                }
+            } else {
+                completion(.failure(CategoryError(type: .unknown)))
+            }
+        }
+        task.resume()
+
+        /// -------------
+        /// Local testing:
+
+//        guard
+//            let path = Bundle.main.path(forResource: "ios-challenge-words-booster", ofType: "json"),
+//            let jsonData = try? Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe),
+//            let categories = try? JSONDecoder().decode([CategoryModel].self, from: jsonData)
+//        else {
+//            completion(.failure(NSError()))
+//            return
+//        }
+//
+//        completion(.success(categories))
     }
 
     func getImage(by url: URL, completion: @escaping (UIImage?) -> Void) {

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF8176CC28A2BA1C00C1E9BB /* ios-challenge-words-booster.json in Resources */ = {isa = PBXBuildFile; fileRef = CF8176CB28A2BA1C00C1E9BB /* ios-challenge-words-booster.json */; };
+		CF8176CF28A2BD7C00C1E9BB /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8176CE28A2BD7C00C1E9BB /* Error.swift */; };
 		CFC277A728A26A4C0079B211 /* ImageAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFC277A528A26A4B0079B211 /* ImageAssets.xcassets */; };
 		CFC277A828A26A4C0079B211 /* ColorAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFC277A628A26A4C0079B211 /* ColorAssets.xcassets */; };
 		CFC277AF28A26B210079B211 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC277AE28A26B210079B211 /* APIService.swift */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CF8176CB28A2BA1C00C1E9BB /* ios-challenge-words-booster.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "ios-challenge-words-booster.json"; sourceTree = "<group>"; };
+		CF8176CE28A2BD7C00C1E9BB /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		CFC277A528A26A4B0079B211 /* ImageAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ImageAssets.xcassets; sourceTree = "<group>"; };
 		CFC277A628A26A4C0079B211 /* ColorAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ColorAssets.xcassets; sourceTree = "<group>"; };
 		CFC277AE28A26B210079B211 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
@@ -47,6 +51,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CF8176CA28A2BA0200C1E9BB /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				CF8176CB28A2BA1C00C1E9BB /* ios-challenge-words-booster.json */,
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
+		CF8176CD28A2BD7000C1E9BB /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				CF8176CE28A2BD7C00C1E9BB /* Error.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
 		CFC277A328A269560079B211 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +98,7 @@
 		CFC277AB28A26AC80079B211 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				CF8176CD28A2BD7000C1E9BB /* Error */,
 				CFC277AD28A26B0E0079B211 /* Model */,
 				CFC277AC28A26B080079B211 /* Service */,
 			);
@@ -128,6 +149,7 @@
 		CFC5716528A25B26004A3958 /* BoosterTestTask */ = {
 			isa = PBXGroup;
 			children = (
+				CF8176CA28A2BA0200C1E9BB /* Misc */,
 				CFC277AB28A26AC80079B211 /* API */,
 				CFC277AA28A26ABE0079B211 /* UI */,
 				CFC277A928A26A760079B211 /* Common */,
@@ -199,6 +221,7 @@
 				CFC5717328A25B28004A3958 /* LaunchScreen.storyboard in Resources */,
 				CFC5716E28A25B26004A3958 /* Main.storyboard in Resources */,
 				CFC277A828A26A4C0079B211 /* ColorAssets.xcassets in Resources */,
+				CF8176CC28A2BA1C00C1E9BB /* ios-challenge-words-booster.json in Resources */,
 				CFC277A728A26A4C0079B211 /* ImageAssets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -210,6 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF8176CF28A2BD7C00C1E9BB /* Error.swift in Sources */,
 				CFC5716B28A25B26004A3958 /* CategoryViewController.swift in Sources */,
 				CFC277AF28A26B210079B211 /* APIService.swift in Sources */,
 				CFC5716728A25B26004A3958 /* AppDelegate.swift in Sources */,
