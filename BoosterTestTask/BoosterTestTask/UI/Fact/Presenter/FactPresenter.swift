@@ -29,6 +29,8 @@ extension FactPresenter: FactPresenterProtocol {
 
     func viewDidLoadEvent() {
         viewState.facts = interactor.entity.facts
+        view?.setupNavigation(with: interactor.entity.categoryTitle)
+        view?.setupPageControl()
         view?.update(with: viewState)
     }
 

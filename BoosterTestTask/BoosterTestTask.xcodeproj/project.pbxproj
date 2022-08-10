@@ -28,6 +28,11 @@
 		CF81770528A3B7F800C1E9BB /* FactInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF81770428A3B7F800C1E9BB /* FactInteractor.swift */; };
 		CF81770728A3B89100C1E9BB /* FactRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF81770628A3B89100C1E9BB /* FactRouter.swift */; };
 		CF81770928A3B8F400C1E9BB /* FactProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF81770828A3B8F400C1E9BB /* FactProtocols.swift */; };
+		CF81770B28A3DD9600C1E9BB /* FactCollectionViewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF81770A28A3DD9600C1E9BB /* FactCollectionViewProvider.swift */; };
+		CF81770F28A3E15200C1E9BB /* FactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF81770D28A3E15200C1E9BB /* FactCell.swift */; };
+		CF81771028A3E15200C1E9BB /* FactCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF81770E28A3E15200C1E9BB /* FactCell.xib */; };
+		CF81771428A3F7A600C1E9BB /* FactFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF81771228A3F7A600C1E9BB /* FactFooterView.swift */; };
+		CF81771528A3F7A600C1E9BB /* FactFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF81771328A3F7A600C1E9BB /* FactFooterView.xib */; };
 		CFC277A728A26A4C0079B211 /* ImageAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFC277A528A26A4B0079B211 /* ImageAssets.xcassets */; };
 		CFC277A828A26A4C0079B211 /* ColorAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFC277A628A26A4C0079B211 /* ColorAssets.xcassets */; };
 		CFC277AF28A26B210079B211 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC277AE28A26B210079B211 /* APIService.swift */; };
@@ -63,6 +68,11 @@
 		CF81770428A3B7F800C1E9BB /* FactInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactInteractor.swift; sourceTree = "<group>"; };
 		CF81770628A3B89100C1E9BB /* FactRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactRouter.swift; sourceTree = "<group>"; };
 		CF81770828A3B8F400C1E9BB /* FactProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactProtocols.swift; sourceTree = "<group>"; };
+		CF81770A28A3DD9600C1E9BB /* FactCollectionViewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactCollectionViewProvider.swift; sourceTree = "<group>"; };
+		CF81770D28A3E15200C1E9BB /* FactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactCell.swift; sourceTree = "<group>"; };
+		CF81770E28A3E15200C1E9BB /* FactCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FactCell.xib; sourceTree = "<group>"; };
+		CF81771228A3F7A600C1E9BB /* FactFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactFooterView.swift; sourceTree = "<group>"; };
+		CF81771328A3F7A600C1E9BB /* FactFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FactFooterView.xib; sourceTree = "<group>"; };
 		CFC277A528A26A4B0079B211 /* ImageAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ImageAssets.xcassets; sourceTree = "<group>"; };
 		CFC277A628A26A4C0079B211 /* ColorAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ColorAssets.xcassets; sourceTree = "<group>"; };
 		CFC277AE28A26B210079B211 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
@@ -202,6 +212,7 @@
 		CF8176F128A3B43B00C1E9BB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CF81771128A3F78600C1E9BB /* Views */,
 				CF8176FB28A3B52A00C1E9BB /* Cells */,
 				CF8176F728A3B52100C1E9BB /* FactViewController.swift */,
 				CF8176F828A3B52100C1E9BB /* FactViewController.xib */,
@@ -213,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				CF8176FC28A3B54600C1E9BB /* FactPresenter.swift */,
+				CF81770A28A3DD9600C1E9BB /* FactCollectionViewProvider.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -254,8 +266,27 @@
 		CF8176FB28A3B52A00C1E9BB /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				CF81770C28A3E13800C1E9BB /* FactCell */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		CF81770C28A3E13800C1E9BB /* FactCell */ = {
+			isa = PBXGroup;
+			children = (
+				CF81770D28A3E15200C1E9BB /* FactCell.swift */,
+				CF81770E28A3E15200C1E9BB /* FactCell.xib */,
+			);
+			path = FactCell;
+			sourceTree = "<group>";
+		};
+		CF81771128A3F78600C1E9BB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CF81771228A3F7A600C1E9BB /* FactFooterView.swift */,
+				CF81771328A3F7A600C1E9BB /* FactFooterView.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		CFC277A328A269560079B211 /* Resources */ = {
@@ -414,9 +445,11 @@
 				CF8176FA28A3B52100C1E9BB /* FactViewController.xib in Resources */,
 				CFC5717328A25B28004A3958 /* LaunchScreen.storyboard in Resources */,
 				CF8176ED28A3015300C1E9BB /* CategoryCell.xib in Resources */,
+				CF81771028A3E15200C1E9BB /* FactCell.xib in Resources */,
 				CFC5716E28A25B26004A3958 /* Main.storyboard in Resources */,
 				CFC277A828A26A4C0079B211 /* ColorAssets.xcassets in Resources */,
 				CF8176CC28A2BA1C00C1E9BB /* ios-challenge-words-booster.json in Resources */,
+				CF81771528A3F7A600C1E9BB /* FactFooterView.xib in Resources */,
 				CFC277A728A26A4C0079B211 /* ImageAssets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -434,10 +467,12 @@
 				CF8176E328A2FDD400C1E9BB /* CategoryViewState.swift in Sources */,
 				CF8176DD28A2DF9900C1E9BB /* CategoryInteractor.swift in Sources */,
 				CF8176CF28A2BD7C00C1E9BB /* Error.swift in Sources */,
+				CF81770B28A3DD9600C1E9BB /* FactCollectionViewProvider.swift in Sources */,
 				CF81770328A3B7A600C1E9BB /* FactEntity.swift in Sources */,
 				CF8176E128A2E54C00C1E9BB /* CategoryBuilder.swift in Sources */,
 				CF8176FD28A3B54600C1E9BB /* FactPresenter.swift in Sources */,
 				CF8176DB28A2DE4B00C1E9BB /* CategoryProtocols.swift in Sources */,
+				CF81771428A3F7A600C1E9BB /* FactFooterView.swift in Sources */,
 				CF81770728A3B89100C1E9BB /* FactRouter.swift in Sources */,
 				CFC5716B28A25B26004A3958 /* CategoryViewController.swift in Sources */,
 				CF8176DF28A2E17200C1E9BB /* CategoryPresenter.swift in Sources */,
@@ -452,6 +487,7 @@
 				CF8176EF28A3063700C1E9BB /* ImageLoader.swift in Sources */,
 				CFC277B228A26B8B0079B211 /* CategoryModel.swift in Sources */,
 				CFC277B728A273030079B211 /* LoadingView.swift in Sources */,
+				CF81770F28A3E15200C1E9BB /* FactCell.swift in Sources */,
 				CFC5716928A25B26004A3958 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

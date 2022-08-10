@@ -22,7 +22,7 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" name="General/Beige"/>
+                        <color key="backgroundColor" name="General/nova-white"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DoG-8u-Hpb" secondAttribute="trailing" id="Ii0-SN-C5x"/>
                             <constraint firstAttribute="bottom" secondItem="DoG-8u-Hpb" secondAttribute="bottom" id="brd-7Y-9by"/>
@@ -40,7 +40,7 @@
         </scene>
     </scenes>
     <resources>
-        <namedColor name="General/Beige">
+        <namedColor name="General/nova-white">
             <color red="0.97254901960784312" green="0.92941176470588238" blue="0.85098039215686272" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>

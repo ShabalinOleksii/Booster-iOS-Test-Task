@@ -12,6 +12,8 @@ protocol FactRouterProtocol: AnyObject { }
 
 // MARK: - View
 protocol FactViewProtocol: AnyObject {
+    func setupNavigation(with title: String)
+    func setupPageControl()
     func update(with viewState: FactViewState)
 }
 

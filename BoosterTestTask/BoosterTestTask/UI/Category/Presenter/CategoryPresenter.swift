@@ -46,10 +46,11 @@ extension CategoryPresenter: CategoryPresenterActionHandler {
 
     func didSelectCategory(with identifier: Int) {
         guard
-            let category = viewState.categories.first(where: { $0.order == identifier })
+            let category = viewState.categories.first(where: { $0.order == identifier }),
+            !category.content.isEmpty && category.status != .undefined
         else { return }
 
-        let entity = FactEntity(facts: category.content)
+        let entity = FactEntity(categoryTitle: category.title, facts: category.content)
         router.show(.facts(entity: entity))
     }
 }

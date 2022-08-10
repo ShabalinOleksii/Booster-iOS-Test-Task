@@ -9,5 +9,6 @@ import Foundation
 
 struct FactEntity {
 
+    var categoryTitle: String = ""
     var facts: [FactModel] = []
 }

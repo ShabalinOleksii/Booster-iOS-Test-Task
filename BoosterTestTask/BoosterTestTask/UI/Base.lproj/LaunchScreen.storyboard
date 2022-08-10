@@ -25,7 +25,7 @@
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" name="General/beige"/>
+                        <color key="backgroundColor" name="General/nova-white"/>
                         <constraints>
                             <constraint firstItem="wKX-Dz-Xwv" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Xtp-8n-PY3"/>
                             <constraint firstItem="wKX-Dz-Xwv" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="es7-XZ-Ex8"/>
@@ -39,7 +39,7 @@
     </scenes>
     <resources>
         <image name="Launch/paw-heart" width="626" height="626"/>
-        <namedColor name="General/beige">
+        <namedColor name="General/nova-white">
             <color red="0.97254901960784312" green="0.92941176470588238" blue="0.85098039215686272" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>

@@ -77,6 +77,8 @@ private extension CategoryTableViewProvider {
         tableView.delegate = self
         tableView.dataSource = self
 
+        tableView.separatorStyle = .none
+
         registerNibs()
     }
 

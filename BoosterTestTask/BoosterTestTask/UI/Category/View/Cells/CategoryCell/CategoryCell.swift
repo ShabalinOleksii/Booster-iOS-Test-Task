@@ -11,7 +11,16 @@ final class CategoryCell: UITableViewCell {
 
     static let identifier = String(describing: CategoryCell.self)
 
-    @IBOutlet private var icon: UIImageView!
+    @IBOutlet private var categoryView: UIView! {
+        didSet {
+            categoryView.layer.cornerRadius = 10.0
+        }
+    }
+    @IBOutlet private var icon: UIImageView! {
+        didSet {
+            icon.layer.cornerRadius = 8.0
+        }
+    }
     @IBOutlet private var title: UILabel!
     @IBOutlet private var subtitle: UILabel!
     @IBOutlet private var status: UILabel!
