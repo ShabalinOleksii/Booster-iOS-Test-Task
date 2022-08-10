@@ -46,12 +46,29 @@ extension CategoryPresenter: CategoryPresenterActionHandler {
 
     func didSelectCategory(with identifier: Int) {
         guard
-            let category = viewState.categories.first(where: { $0.order == identifier }),
-            !category.content.isEmpty && category.status != .undefined
+            let category = viewState.categories.first(where: { $0.order == identifier })
         else { return }
 
         let entity = FactEntity(categoryTitle: category.title, facts: category.content)
-        router.show(.facts(entity: entity))
+
+        switch category.status {
+        case .free:
+            router.show(.facts(entity: entity))
+        case .paid:
+            let completion = {
+                DispatchQueue.main.async {
+                    self.view?.showLoadingIndicator(true)
+                }
+
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                    self.view?.showLoadingIndicator(false)
+                    self.router.show(.facts(entity: entity))
+                }
+            }
+            router.show(.alert(.advertisementRequest(completion: completion)))
+        case .undefined:
+            router.show(.alert(.unsupportedCategory))
+        }
     }
 }
 

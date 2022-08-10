@@ -55,7 +55,7 @@ final class CategoryModel: Decodable {
         image = try container.decode(String.self, forKey: .image)
         order = try container.decode(Int.self, forKey: .order)
         let categoryStatus = try container.decode(String.self, forKey: .status)
-        status = CategoryStatus(rawValue: categoryStatus) ?? .undefined
         content = (try? container.decode([FactModel].self, forKey: .content)) ?? []
+        status = content.isEmpty ? .undefined : CategoryStatus(rawValue: categoryStatus) ?? .undefined
     }
 }

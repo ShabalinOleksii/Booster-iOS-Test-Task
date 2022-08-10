@@ -8,7 +8,14 @@
 import Foundation
 
 enum CategoryDestination {
+
+    enum Alert {
+        case unsupportedCategory
+        case advertisementRequest(completion: () -> Void)
+    }
+
     case facts(entity: FactEntity)
+    case alert(Alert)
 }
 
 // MARK: - Router
