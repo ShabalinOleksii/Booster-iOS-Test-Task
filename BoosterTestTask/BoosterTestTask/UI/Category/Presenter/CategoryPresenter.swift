@@ -25,6 +25,7 @@ final class CategoryPresenter {
     }
 }
 
+// MARK: - CategoryViewDelegate
 extension CategoryPresenter: CategoryPresenterProtocol {
 
     func viewDidLoadEvent() {
@@ -40,6 +41,20 @@ extension CategoryPresenter: CategoryPresenterProtocol {
     }
 }
 
+// MARK: - CategoryPresenterActionHandler
+extension CategoryPresenter: CategoryPresenterActionHandler {
+
+    func didSelectCategory(with identifier: Int) {
+        guard
+            let category = viewState.categories.first(where: { $0.order == identifier })
+        else { return }
+
+        let entity = FactEntity(facts: category.content)
+        router.show(.facts(entity: entity))
+    }
+}
+
+// MARK: - Private Extension
 private extension CategoryPresenter {
 
     func loadCategories() {

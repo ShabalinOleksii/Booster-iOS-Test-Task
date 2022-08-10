@@ -19,6 +19,15 @@
 		CF8176EC28A3015200C1E9BB /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8176EA28A3015200C1E9BB /* CategoryCell.swift */; };
 		CF8176ED28A3015300C1E9BB /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF8176EB28A3015200C1E9BB /* CategoryCell.xib */; };
 		CF8176EF28A3063700C1E9BB /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8176EE28A3063700C1E9BB /* ImageLoader.swift */; };
+		CF8176F928A3B52100C1E9BB /* FactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8176F728A3B52100C1E9BB /* FactViewController.swift */; };
+		CF8176FA28A3B52100C1E9BB /* FactViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF8176F828A3B52100C1E9BB /* FactViewController.xib */; };
+		CF8176FD28A3B54600C1E9BB /* FactPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8176FC28A3B54600C1E9BB /* FactPresenter.swift */; };
+		CF8176FF28A3B55700C1E9BB /* FactViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8176FE28A3B55700C1E9BB /* FactViewState.swift */; };
+		CF81770128A3B64800C1E9BB /* FactBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF81770028A3B64800C1E9BB /* FactBuilder.swift */; };
+		CF81770328A3B7A600C1E9BB /* FactEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF81770228A3B7A600C1E9BB /* FactEntity.swift */; };
+		CF81770528A3B7F800C1E9BB /* FactInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF81770428A3B7F800C1E9BB /* FactInteractor.swift */; };
+		CF81770728A3B89100C1E9BB /* FactRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF81770628A3B89100C1E9BB /* FactRouter.swift */; };
+		CF81770928A3B8F400C1E9BB /* FactProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF81770828A3B8F400C1E9BB /* FactProtocols.swift */; };
 		CFC277A728A26A4C0079B211 /* ImageAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFC277A528A26A4B0079B211 /* ImageAssets.xcassets */; };
 		CFC277A828A26A4C0079B211 /* ColorAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFC277A628A26A4C0079B211 /* ColorAssets.xcassets */; };
 		CFC277AF28A26B210079B211 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC277AE28A26B210079B211 /* APIService.swift */; };
@@ -45,6 +54,15 @@
 		CF8176EA28A3015200C1E9BB /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		CF8176EB28A3015200C1E9BB /* CategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
 		CF8176EE28A3063700C1E9BB /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		CF8176F728A3B52100C1E9BB /* FactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactViewController.swift; sourceTree = "<group>"; };
+		CF8176F828A3B52100C1E9BB /* FactViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FactViewController.xib; sourceTree = "<group>"; };
+		CF8176FC28A3B54600C1E9BB /* FactPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactPresenter.swift; sourceTree = "<group>"; };
+		CF8176FE28A3B55700C1E9BB /* FactViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactViewState.swift; sourceTree = "<group>"; };
+		CF81770028A3B64800C1E9BB /* FactBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactBuilder.swift; sourceTree = "<group>"; };
+		CF81770228A3B7A600C1E9BB /* FactEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactEntity.swift; sourceTree = "<group>"; };
+		CF81770428A3B7F800C1E9BB /* FactInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactInteractor.swift; sourceTree = "<group>"; };
+		CF81770628A3B89100C1E9BB /* FactRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactRouter.swift; sourceTree = "<group>"; };
+		CF81770828A3B8F400C1E9BB /* FactProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactProtocols.swift; sourceTree = "<group>"; };
 		CFC277A528A26A4B0079B211 /* ImageAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ImageAssets.xcassets; sourceTree = "<group>"; };
 		CFC277A628A26A4C0079B211 /* ColorAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ColorAssets.xcassets; sourceTree = "<group>"; };
 		CFC277AE28A26B210079B211 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
@@ -94,7 +112,7 @@
 				CF8176D128A2DDE600C1E9BB /* View */,
 				CF8176D228A2DDEF00C1E9BB /* Interactor */,
 				CF8176D328A2DDFE00C1E9BB /* Presenter */,
-				CF8176D428A2DE0600C1E9BB /* Entities */,
+				CF8176D428A2DE0600C1E9BB /* Entity */,
 				CF8176D528A2DE1000C1E9BB /* Router */,
 			);
 			path = Category;
@@ -126,12 +144,12 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
-		CF8176D428A2DE0600C1E9BB /* Entities */ = {
+		CF8176D428A2DE0600C1E9BB /* Entity */ = {
 			isa = PBXGroup;
 			children = (
 				CF8176E228A2FDD400C1E9BB /* CategoryViewState.swift */,
 			);
-			path = Entities;
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		CF8176D528A2DE1000C1E9BB /* Router */ = {
@@ -168,6 +186,78 @@
 			path = CategoryCell;
 			sourceTree = "<group>";
 		};
+		CF8176F028A3B42900C1E9BB /* Fact */ = {
+			isa = PBXGroup;
+			children = (
+				CF8176F628A3B4FE00C1E9BB /* Protocols */,
+				CF8176F128A3B43B00C1E9BB /* View */,
+				CF8176F328A3B45C00C1E9BB /* Interactor */,
+				CF8176F228A3B44200C1E9BB /* Presenter */,
+				CF8176F428A3B46300C1E9BB /* Entity */,
+				CF8176F528A3B49D00C1E9BB /* Router */,
+			);
+			path = Fact;
+			sourceTree = "<group>";
+		};
+		CF8176F128A3B43B00C1E9BB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CF8176FB28A3B52A00C1E9BB /* Cells */,
+				CF8176F728A3B52100C1E9BB /* FactViewController.swift */,
+				CF8176F828A3B52100C1E9BB /* FactViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CF8176F228A3B44200C1E9BB /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				CF8176FC28A3B54600C1E9BB /* FactPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		CF8176F328A3B45C00C1E9BB /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				CF81770428A3B7F800C1E9BB /* FactInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		CF8176F428A3B46300C1E9BB /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				CF8176FE28A3B55700C1E9BB /* FactViewState.swift */,
+				CF81770228A3B7A600C1E9BB /* FactEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		CF8176F528A3B49D00C1E9BB /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				CF81770028A3B64800C1E9BB /* FactBuilder.swift */,
+				CF81770628A3B89100C1E9BB /* FactRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		CF8176F628A3B4FE00C1E9BB /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				CF81770828A3B8F400C1E9BB /* FactProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		CF8176FB28A3B52A00C1E9BB /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		CFC277A328A269560079B211 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -189,6 +279,7 @@
 		CFC277AA28A26ABE0079B211 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				CF8176F028A3B42900C1E9BB /* Fact */,
 				CF8176D028A2DDD900C1E9BB /* Category */,
 				CFC5716C28A25B26004A3958 /* Main.storyboard */,
 				CFC5717128A25B28004A3958 /* LaunchScreen.storyboard */,
@@ -320,6 +411,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF8176FA28A3B52100C1E9BB /* FactViewController.xib in Resources */,
 				CFC5717328A25B28004A3958 /* LaunchScreen.storyboard in Resources */,
 				CF8176ED28A3015300C1E9BB /* CategoryCell.xib in Resources */,
 				CFC5716E28A25B26004A3958 /* Main.storyboard in Resources */,
@@ -336,19 +428,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF8176FF28A3B55700C1E9BB /* FactViewState.swift in Sources */,
+				CF8176F928A3B52100C1E9BB /* FactViewController.swift in Sources */,
 				CF8176EC28A3015200C1E9BB /* CategoryCell.swift in Sources */,
 				CF8176E328A2FDD400C1E9BB /* CategoryViewState.swift in Sources */,
 				CF8176DD28A2DF9900C1E9BB /* CategoryInteractor.swift in Sources */,
 				CF8176CF28A2BD7C00C1E9BB /* Error.swift in Sources */,
+				CF81770328A3B7A600C1E9BB /* FactEntity.swift in Sources */,
 				CF8176E128A2E54C00C1E9BB /* CategoryBuilder.swift in Sources */,
+				CF8176FD28A3B54600C1E9BB /* FactPresenter.swift in Sources */,
 				CF8176DB28A2DE4B00C1E9BB /* CategoryProtocols.swift in Sources */,
+				CF81770728A3B89100C1E9BB /* FactRouter.swift in Sources */,
 				CFC5716B28A25B26004A3958 /* CategoryViewController.swift in Sources */,
 				CF8176DF28A2E17200C1E9BB /* CategoryPresenter.swift in Sources */,
 				CF8176E528A2FF6D00C1E9BB /* CategoryTableViewProvider.swift in Sources */,
+				CF81770528A3B7F800C1E9BB /* FactInteractor.swift in Sources */,
 				CF8176D728A2DE2900C1E9BB /* CategoryRouter.swift in Sources */,
+				CF81770928A3B8F400C1E9BB /* FactProtocols.swift in Sources */,
 				CFC277AF28A26B210079B211 /* APIService.swift in Sources */,
 				CFC5716728A25B26004A3958 /* AppDelegate.swift in Sources */,
 				CFC277B428A26B950079B211 /* FactModel.swift in Sources */,
+				CF81770128A3B64800C1E9BB /* FactBuilder.swift in Sources */,
 				CF8176EF28A3063700C1E9BB /* ImageLoader.swift in Sources */,
 				CFC277B228A26B8B0079B211 /* CategoryModel.swift in Sources */,
 				CFC277B728A273030079B211 /* LoadingView.swift in Sources */,

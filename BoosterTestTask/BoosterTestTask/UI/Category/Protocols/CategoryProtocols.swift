@@ -8,7 +8,7 @@
 import Foundation
 
 enum CategoryDestination {
-    case facts
+    case facts(entity: FactEntity)
 }
 
 // MARK: - Router
@@ -34,4 +34,9 @@ protocol CategoryInteractorProtocol {
 }
 
 // MARK: - Presenter
-protocol CategoryPresenterProtocol: CategoryViewDelegate { }
+protocol CategoryPresenterActionHandler {
+    func didSelectCategory(with identifier: Int)
+}
+
+protocol CategoryPresenterProtocol: CategoryViewDelegate,
+                                    CategoryPresenterActionHandler { }

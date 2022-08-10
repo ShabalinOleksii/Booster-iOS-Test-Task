@@ -63,7 +63,12 @@ extension CategoryTableViewProvider: UITableViewDataSource {
 }
 
 // MARK: - UITableViewDelegate
-extension CategoryTableViewProvider: UITableViewDelegate { }
+extension CategoryTableViewProvider: UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter?.didSelectCategory(with: viewState.categories[indexPath.row].order)
+    }
+}
 
 // MARK: - Register & Dequeue Cells
 private extension CategoryTableViewProvider {
