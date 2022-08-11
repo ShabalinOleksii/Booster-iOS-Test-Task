@@ -50,8 +50,16 @@ extension APIService: APIServiceProtocol {
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
             if let data = data {
                 do {
-                    let jsonData = try JSONDecoder().decode([CategoryModel].self, from: data)
-                    completion(.success(jsonData))
+                    // Writing data to local storage.
+                    FileStorage.write(data: data, to: "Categories")
+
+                    // Reading data from local storage.
+                    if let storedData = FileStorage.read(from: "Categories") {
+                        let jsonData = try JSONDecoder().decode([CategoryModel].self, from: storedData)
+                        completion(.success(jsonData))
+                    } else {
+                        completion(.failure(CategoryError(type: .internal(.storageException))))
+                    }
                 } catch {
                     completion(.failure(CategoryError(type: .internal(.decodeFailure))))
                 }

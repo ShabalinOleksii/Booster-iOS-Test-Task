@@ -34,6 +34,7 @@ enum CategoryErrorType {
     enum InternalError: Int {
         case invalidURL
         case decodeFailure
+        case storageException
     }
 }
 
@@ -61,6 +62,8 @@ extension CategoryErrorType: ErrorLocalizedDescriptionProtocol {
             return "Provided URL is invalid"
         case .decodeFailure:
             return "Model decoding has failed"
+        case .storageException:
+            return "Couldn't find or read file by path"
         }
     }
 }
